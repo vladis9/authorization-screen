@@ -30,6 +30,9 @@
                                 <rect key="frame" x="45" y="483" width="110" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Forgot your login?"/>
+                                <connections>
+                                    <action selector="forgotLoginPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3T-Hf-mOG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAy-rl-Drd">
                                 <rect key="frame" x="180" y="430" width="54" height="36"/>
@@ -43,6 +46,9 @@
                                 <rect key="frame" x="253" y="483" width="108" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Forgot password?"/>
+                                <connections>
+                                    <action selector="forgotPasswordPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJw-Bf-v7a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

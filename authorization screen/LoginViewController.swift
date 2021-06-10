@@ -28,14 +28,33 @@ class LoginViewController: UIViewController {
     // MARK: IB Actions
     
     @IBAction func loginPressed() {
-        guard loginTextField.text == login, passwordTextField.text == password
+        guard
+            loginTextField.text == login,
+            passwordTextField.text == password
         else {
+            showAlert(title: "Invalid login or password", message: "Enter correct login and password", textField: passwordTextField)
             return
         }
         performSegue(withIdentifier: "logIn", sender: nil)
     }
     
+    @IBAction func forgotLoginPressed() {
+        showAlert(title: "Oops", message: "Your name is \(login)")
+    }
+    @IBAction func forgotPasswordPressed() {
+        showAlert(title: "Oops", message: "Your password is \(password)")
+    }
+}
 
-
+// MARK: Alert controller
+extension LoginViewController {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = nil
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 

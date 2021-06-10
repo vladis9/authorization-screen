@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
     // MARK: Public properties
     var login: String!
     
-    // MARK: Private priperties
+    // MARK: Private properties
     override func viewDidLoad() {
         super.viewDidLoad()
         
